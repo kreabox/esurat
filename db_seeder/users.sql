@@ -1,0 +1,1 @@
+INSERT INTO users (username, nama_lengkap, jabatan, password, email, role) VALUES ('admin', 'Admin', 'administrator', '$2y$10$0KGedIzzj/Qx8XsLwZACeuyPhRAxjJGhXBS2O/jRRgsqTHJ5/6COm', 'admin@gmail.com', 'admin');

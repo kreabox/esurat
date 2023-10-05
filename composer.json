@@ -1,0 +1,19 @@
+{
+    "name": "ardy/sipmantap",
+    "autoload": {
+        "psr-4": {
+            "Ardy\\Sipmantap\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kreabox",
+            "email": "id.kreabox@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^9.52",
+        "illuminate/events": "^9.52",
+        "phpoffice/phpword": "^1.1"
+    }
+}
