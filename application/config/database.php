@@ -8,9 +8,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	// 'username' => 'root','password' => 'root','database' => 'simasdak',
+	'username' => 'root','password' => 'root','database' => 'simasdak',
 	// 'username' => 'u927612970_esurat','password' => 'W9rKZmp@3^p7','database' => 'u927612970_esurat',
-	'username' => 'kreaboxi_esurat','password' => 'esurat_demo','database' => 'kreaboxi_esurat',
+	// 'username' => 'kreaboxi_esurat','password' => 'esurat_demo','database' => 'kreaboxi_esurat',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
