@@ -41,7 +41,10 @@ class Backend extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 	public function disposisi() {
-		$data['disposisi'] = Disposisi_model::join('surat_masuk', 'surat_masuk.suratmasukId', '=', 'disposisi.suratId')->get();
+		$data['disposisi'] = Disposisi_model::join('surat_masuk', 'surat_masuk.suratmasukId', '=', 'disposisi.suratmasukId')
+		->join('penandatangan', 'penandatangan.penandatanganId', '=', 'disposisi.userId_dari')
+		->join('penandatangan as u', 'u.penandatanganId', '=', 'disposisi.userId_kepada')
+		->get(['disposisi.*', 'surat_masuk.nomor','surat_masuk.pengirim','surat_masuk.perihal','surat_masuk.tanggal','surat_masuk.file', 'penandatangan.nama as dari', 'u.nama as kepada']);
 		$data['title'] = 'Disposisi Management';
 		$data['content'] = 'pages/disposisi/daftar';
 		$this->load->view('template', $data);
