@@ -9,6 +9,7 @@ class Backend extends CI_Controller {
 		$this->load->model('Suratkeluar_model');
 		$this->load->model('Template_model');
 		$this->load->model('Penandatangan_model');
+		$this->load->model('Disposisi_model');
 		$this->load->model('Activity_model');
 		cekNotAuth();
 		// $this->load->library('session');
@@ -40,6 +41,7 @@ class Backend extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 	public function disposisi() {
+		$data['disposisi'] = Disposisi_model::join('surat_masuk', 'surat_masuk.suratmasukId', '=', 'disposisi.suratId')->get();
 		$data['title'] = 'Disposisi Management';
 		$data['content'] = 'pages/disposisi/daftar';
 		$this->load->view('template', $data);
