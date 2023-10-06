@@ -23,7 +23,7 @@
 								<td><?= $a->nomor  ?></td>
 								<td><?= $a->perihal ?></td>
 								<td><?= $a->kepada ?></td>
-								<td><?= $a->file ?? 'Template Belum Ditentukan' ?></td>
+								<td><?= $a->file_template ?? 'Template Belum Ditentukan' ?></td>
 								<td><?= $a->tanggal ?></td>
 								<td>
 									<a target="_blank" href="<?= base_url('cetak/surat_keluar/'.$a->suratkeluarId) ?>" class="btn btn-sm btn-dark"><i class="bi bi-printer"></i></a>
